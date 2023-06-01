@@ -7,7 +7,7 @@ namespace fukuv0601
         public Form1()
         {
             InitializeComponent();
-            MessageBox.Show($"{label1.Bottom}");
+            //MessageBox.Show($"{label1.Bottom}");
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -17,7 +17,7 @@ namespace fukuv0601
 
         private void button2_Click(object sender, EventArgs e)
         {
-            vx -= -10;
+            vx -= 10;
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -29,19 +29,19 @@ namespace fukuv0601
 
             if (label1.Left < 0)
             {
-                vx = 10;
+                vx = Math.Abs(vx+(vx/10));
             }
             if (label1.Top < 0)
             {
-                vy = 10;
+                vy = Math.Abs(vy + (vy / 10));
             }
-            if (label1.Right > 800)
+            if (label1.Right > ClientSize.Width)
             {
-                vx = -10;
+                vx = -Math.Abs(vx + (vx / 10));
             }
-            if (label1.Bottom > 450)
+            if (label1.Bottom > ClientSize.Height)
             {
-                vy = -10;
+                vy = -Math.Abs(vy + (vy / 10));
             }
 
 
