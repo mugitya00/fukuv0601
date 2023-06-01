@@ -26,7 +26,7 @@ namespace fukuv0601
         private void label1_Click(object sender, EventArgs e)
         {
             timer1.Stop();
-            label1.Text = ("Šİ–ì—I^");
+            label1.Text = "Šİ–ì—I^";
         }
     }
 }
