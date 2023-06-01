@@ -20,7 +20,7 @@ namespace fukuv0601
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            label1.Left = vx;
+            label1.Left += vx;
         }
 
         private void label1_Click(object sender, EventArgs e)
